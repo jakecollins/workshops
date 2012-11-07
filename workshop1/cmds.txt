@@ -1,0 +1,12 @@
+java OpenResources 1 1 1 &
+export PID=$!
+sudo dtruss -p $PID 2>&1 | grep -v psynch_cv > /tmp/dtruss.txt
+
+After handles open:
+lsof -p $PID | grep -v /Java > /tmp/lsof.txt
+
+grep ^open dtruss.txt
+grep ^write dtruss.txt
+grep ^listen dtruss.txt
+grep ^bind dtruss.txt
+
