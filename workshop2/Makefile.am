@@ -1,0 +1,3 @@
+CFLAGS=
+SUBDIRS=src
+
