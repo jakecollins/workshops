@@ -1,0 +1,13 @@
+gcc -v
+
+man -S3 <call> 
+
+DIR -> /usr/include/dirent.h:72
+dirent -> sys/dirent.h:92
+opendir -> /usr/include/dirent.h:104 -> /usr/src/Libc-763.13/gen/FreeBSD/opendir.c
+readdir -> /usr/include/dirent.h:106
+closedir -> /usr/include/dirent.h:102
+
+puts -> /usr/include/stdio.h:270 -> /usr/src/Libc-763.13/stdio/puts-fbsd.c
+perror -> /usr/include/stdio.h:266 -> /usr/src/Libc-763.13/stdio/perror-fbsd.c
+
